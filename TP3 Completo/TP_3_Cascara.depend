@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1530734096 source:c:\users\ramonchelito\desktop\tp3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"parser.h"
+	"ArrayList.h"
+	"funciones.h"
+	"movie.h"
+	"utn.h"
+
+1530562928 c:\users\ramonchelito\desktop\tp3\parser.h
+	"ArrayList.h"
+
+1528939010 c:\users\ramonchelito\desktop\tp3\arraylist.h
+
+1530562928 c:\users\ramonchelito\desktop\tp3\funciones.h
+	"movie.h"
+	"ArrayList.h"
+
+1530562928 c:\users\ramonchelito\desktop\tp3\movie.h
+
+1530562928 c:\users\ramonchelito\desktop\tp3\utn.h
+
+1530666574 source:c:\users\ramonchelito\desktop\tp3\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1528939010 c:\users\ramonchelito\desktop\tp3\employee.h
+
+1530562928 source:c:\users\ramonchelito\desktop\tp3\movie.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"movie.h"
+	"utn.h"
+
+1530666581 source:c:\users\ramonchelito\desktop\tp3\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1530732554 source:c:\users\ramonchelito\desktop\tp3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+	"ArrayList.h"
+	"movie.h"
+
+1530735604 source:c:\users\ramonchelito\desktop\tp3\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<ctype.h>
+	"utn.h"
+
+1530735095 source:c:\users\ramonchelito\desktop\tp3\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+	"movie.h"
+	"utn.h"
+	"ArrayList.h"
+	"parser.h"
+	"paginaWeb.h"
+
+1530562928 c:\users\ramonchelito\desktop\tp3\paginaweb.h
+	"movie.h"
+
+1530736676 source:c:\users\ramonchelito\desktop\tp3\paginaweb.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"movie.h"
+	"paginaWeb.h"
+
