@@ -4,42 +4,45 @@
 #include "deposito.h"
 #include "utn.h"
 
-
 int validarDescripcion(char* titulo);
-int validarProducto(int producto);
+int validarCodProducto(int codProducto);
 int validarCantidad(int cantidad);
 
-EDeposito* deposito_new(void)
+EProducto* producto_new(void)
 {
-    EDeposito* auxDeposito = malloc(sizeof(EDeposito));
-    return auxDeposito;
+    EProducto* auxProducto = malloc(sizeof(EProducto));
+    return auxProducto;
 }
 
-EDeposito* deposito_newP(int producto, char* descripcion, int cantidad)
+EProducto* producto_newP(int codProducto, char* descripcion, int cantidad)
 {
-    EDeposito* auxDeposito = malloc(sizeof(EDeposito));
-    if(auxDeposito != NULL)
+    EProducto* auxProducto = malloc(sizeof(EProducto));
+    if(auxProducto != NULL)
     {
-        deposito_setProducto(auxDeposito, producto);
-        deposito_setDescripcion(auxDeposito, descripcion);
-        deposito_setCantidad(auxDeposito, cantidad);
+        producto_setCodProducto(auxProducto, codProducto);
+        producto_setDescripcion(auxProducto, descripcion);
+        producto_setCantidad(auxProducto, cantidad);
     }
-    return auxDeposito;
+    return auxProducto;
 }
 
+void producto_delete(EProducto* this)
+{
+    free(this);
+}
 
-int deposito_setProducto(EDeposito* this,int producto)
+int producto_setCodProducto(EProducto* this,int codProducto)
 {
     int retorno = -1;
-    if(this != NULL && !validarProducto(producto))
+    if(this != NULL && !validarCodProducto(codProducto))
     {
-        this->producto = producto;
+        this->codProducto = codProducto;
         retorno = 0;
     }
     return retorno;
 }
 
-int deposito_setDescripcion(EDeposito* this,char* descripcion)
+int producto_setDescripcion(EProducto* this,char* descripcion)
 {
     int retorno = -1;
     if(this != NULL && descripcion != NULL && validarDescripcion(descripcion))
@@ -50,7 +53,7 @@ int deposito_setDescripcion(EDeposito* this,char* descripcion)
     return retorno;
 }
 
-int deposito_setCantidad(EDeposito* this,int cantidad)
+int producto_setCantidad(EProducto* this,int cantidad)
 {
     int retorno = -1;
     if(this != NULL && !validarCantidad(cantidad))
@@ -62,18 +65,18 @@ int deposito_setCantidad(EDeposito* this,int cantidad)
 }
 
 
-int deposito_getProducto(EDeposito* this,int* producto)
+int producto_getCodProducto(EProducto* this,int* codProducto)
 {
     int retorno = -1;
-    if(this != NULL && producto != NULL)
+    if(this != NULL && codProducto != NULL)
     {
-        *producto = this->producto;
+        *codProducto = this->codProducto;
         retorno = 0;
     }
     return retorno;
 }
 
-int deposito_getDescripcion(EDeposito* this,char* descripcion)
+int producto_getDescripcion(EProducto* this,char* descripcion)
 {
     int retorno = -1;
     if(this != NULL && descripcion != NULL)
@@ -84,7 +87,7 @@ int deposito_getDescripcion(EDeposito* this,char* descripcion)
     return retorno;
 }
 
-int deposito_getCantidad(EDeposito* this,int* cantidad)
+int producto_getCantidad(EProducto* this,int* cantidad)
 {
     int retorno = -1;
     if(this != NULL && cantidad != NULL)
@@ -102,16 +105,16 @@ int validarDescripcion(char* descripcion)
 }
 
 
-int validarProducto(int producto)
+int validarCodProducto(int codProducto)
 {
-    if(producto > 0)
+    if(codProducto > 0)
         return 0;
     return -1;
 }
 
 int validarCantidad(int cantidad)
 {
-    if(cantidad >0 && cantidad < 100)
+    if(cantidad >=0 && cantidad < 999999)
         return 0;
     return -1;
 }

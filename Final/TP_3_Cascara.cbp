@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="ArrayList.h" />
+		<Unit filename="deposito.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="deposito.h" />
 		<Unit filename="funciones.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -42,14 +46,6 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="movie.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="movie.h" />
-		<Unit filename="paginaWeb.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="paginaWeb.h" />
 		<Unit filename="parser.c">
 			<Option compilerVar="CC" />
 		</Unit>

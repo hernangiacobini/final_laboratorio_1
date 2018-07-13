@@ -3,19 +3,19 @@
 #include "parser.h"
 #include "ArrayList.h"
 #include "funciones.h"
-#include "movie.h"
+#include "deposito.h"
 #include "utn.h"
 
 int main()
 {
-    ArrayList* pArrayMovies;
-    pArrayMovies = al_newArrayList();
+    ArrayList* pArrayDepositos;
+    pArrayDepositos = al_newArrayList();
     char seguir='s';
     int opcion;
 
-    EMovie* auxMovie;
+    EDeposito* auxDeposito;
 
-    cargarPeliculas(pArrayMovies);
+    cargarPeliculas(pArrayDepositos);
 
     while(seguir=='s')
     {
@@ -31,24 +31,24 @@ int main()
         switch(opcion)
         {
             case 1:
-                auxMovie = crearPelicula();
-                if(auxMovie != NULL)
+                auxDeposito = crearPelicula();
+                if(auxDeposito != NULL)
                 {
-                    if(agregarPelicula(pArrayMovies, auxMovie))
+                    if(agregarPelicula(pArrayDepositos, auxDeposito))
                        printf("\nHa habido un error\n");
                 }
                 break;
             case 2:
-                if(borrarPelicula(pArrayMovies))
+                if(borrarPelicula(pArrayDepositos))
                     printf("\nHa habido un error\n");
                 break;
             case 3:
-                if(modificarPelicula(pArrayMovies))
+                if(modificarPelicula(pArrayDepositos))
                     printf("\nHa habido un error\n");
                break;
             case 4:
                 generarPagina
-                (pArrayMovies );
+                (pArrayDepositos );
                 break;
             case 5:
                 seguir = 'n';
